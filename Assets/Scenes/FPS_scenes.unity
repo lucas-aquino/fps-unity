@@ -309,6 +309,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 8356656592303947009, guid: 5fd7f951ce21599448adb26576c691eb,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2800000, guid: 05466bf5b1b1ef04eb06be02a79d7761, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fd7f951ce21599448adb26576c691eb, type: 3}
 --- !u!1 &388240853
@@ -1566,6 +1571,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8854200589313235131, guid: ddbe9905b15d55f41a8c7e4f6dc43613,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8854200589313235131, guid: ddbe9905b15d55f41a8c7e4f6dc43613,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 311ccf2c7e4991745a63aebc62e702bd, type: 2}
     - target: {fileID: 8854200589770814473, guid: ddbe9905b15d55f41a8c7e4f6dc43613,
         type: 3}
       propertyPath: m_RenderPostProcessing
