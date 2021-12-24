@@ -59,12 +59,11 @@ public class WeaponController : MonoBehaviour
     private void ControlListener()
     {
         if (Input.GetKey(KeyCode.Mouse0))
-        {
             TryShoot();
-        }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            if (canReload && currentAmmo < maxAmmo) StartCoroutine(Reload());
+            if (canReload && currentAmmo < maxAmmo) 
+                StartCoroutine(Reload());
         }
 
     }
