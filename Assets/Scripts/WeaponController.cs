@@ -5,6 +5,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(ObjectPool))]
 public class WeaponController : MonoBehaviour
 {
 
@@ -14,6 +15,8 @@ public class WeaponController : MonoBehaviour
     [Header("General")]
     public LayerMask hittableLayers;
     public GameObject bulletHolePrefab;
+
+    public ObjectPool bulletHolePool;
 
     [Header("Shoot Parameter")]
     public float fireRage = 200;
@@ -46,6 +49,7 @@ public class WeaponController : MonoBehaviour
     private void Start()
     {
         cameraPlayerTransform = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        bulletHolePool = GetComponent<ObjectPool>();
     }
 
     private void FixedUpdate()
@@ -97,8 +101,11 @@ public class WeaponController : MonoBehaviour
         {
             if (!hit.collider.CompareTag("NonHitiable"))
             {
-                GameObject bulletHoleClone = Instantiate(bulletHolePrefab, hit.point + hit.normal * 0.001f, Quaternion.LookRotation(hit.normal));
-                Destroy(bulletHoleClone, 5f);
+                //GameObject bulletHoleClone = Instantiate(bulletHolePrefab, hit.point + hit.normal * 0.001f, Quaternion.LookRotation(hit.normal));
+                //Destroy(bulletHoleClone, 5f);
+                GameObject bulletHole = bulletHolePool.Spawn(hit.point + hit.normal * 0.001f, Quaternion.LookRotation(hit.normal));
+
+
             }
         }
 

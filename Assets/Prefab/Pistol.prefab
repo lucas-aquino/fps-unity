@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 5597107419623523802}
   - component: {fileID: 6376355905169426782}
   - component: {fileID: -6344072413607739479}
+  - component: {fileID: 3037590919153668223}
   m_Layer: 8
   m_Name: Pistol
   m_TagString: Untagged
@@ -88,6 +89,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -113,6 +115,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &6376355905169426782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,12 +129,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponMuzzle: {fileID: 5222603807274166451}
-  ammoUI: {fileID: 7366569207628038656, guid: c920e137b1ff22740bd78b5892549d03, type: 3}
   hittableLayers:
     serializedVersion: 2
     m_Bits: 4294967295
   bulletHolePrefab: {fileID: 9166387549566585032, guid: b26c5be8710185c4d8f217e9fc77bfe9,
     type: 3}
+  bulletHolePool: {fileID: 0}
   fireRage: 200
   recoilForce: 4
   fireRate: 0.2
@@ -160,3 +163,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSizeX: 1.2
   rotationSizeY: 1.2
+--- !u!114 &3037590919153668223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6165495542749016326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e430836104b22408820bd8e6bf5e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 9166387549566585032, guid: b26c5be8710185c4d8f217e9fc77bfe9,
+    type: 3}
+  poolSize: 50
